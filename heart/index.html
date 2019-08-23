@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>heart</title>
+	<link rel="stylesheet" href="css/frame.css">
+	<script src="js/heart.js"></script>
+</head>
+<body>
+	<div class="demo">
+		<div class="heart-con" id="heart">点这里</div>
+	</div>
+</body>
+<script>
+	var heartNode = document.getElementById('heart');
+	new Heart({
+		parentNode: heartNode
+	})
+</script>
+</html>

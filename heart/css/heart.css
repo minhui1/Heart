@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "M-iconfont";
+    src: url('../fonts/iconfont.eot?t=1566467720844');
+    /* IE9 */
+    src: url('../fonts/iconfont.eot?t=1566467720844#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+  		url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKwAAsAAAAABmgAAAJkAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApcfAE2AiQDCAsGAAQgBYUFBy8buQXInpo8CWSbAoqHEQXA4G6I4Gntdd7eXmB/gFkSyaRlVQ2kBJD1FarCsK6+v9Z+7zBtUBezrw1xP3kntjd7i0oVS907QzUNjUgmmYcAEvAn+OCa+rEBDfhAZB1WGWSzAolqGkmZTHzD2AUuYT+BYkY54bq1exiSZNawQLw1NBGScjpZZs4Ooa1mbhbf1DrS+wT4Gn4//sFBJJHUFSvs/vMWBep/Rm232O2GZz5CT0CLa1TYAjLxuNZ2J1YwUqxii7MA9hUc/Iz+N75M7FUs2F9nBXaBKUi5J6pLu9XABHJcOw5sjwojjQlrd89W+6enfuX8Q9bo6MPLyys4u+V55HWsLBq+pwUzU6V+2mb98mJj1Xf+987WtwstF36mlM9MugXvk+lj7aNtUxlwDtCI/RN7BAKCd/+F5zKr/5JSM/ixf7QTahpx+ilAxx7lwZ+h9izLOt2SpqxSaxXJ+KihCUVBE1YN+BkrGL4NVyiGb0bRbjaFSrGCZuIe1FoOoU1xA8WmvsUtg1bFityJDQcAwpALSHp8h8qQdzQTf6E2EgK0GYpsKJ5G2ZotK7FTZihyVIi0QgyZuqpj5Ck9FUq9QdQWbJEV0uJXRpH5BnVJOBCqcLahi2yuCf6iFuFcJSqjDmllh6FtU+IxaqLMAzrnXmUwqNY9KSBTB1JcYZCIQwpCsoIwyCiX6jfPpbhVoX1/ENIssIlYa04tdhRifAZqnQgLCPVC2zhuz6x7e8S3SBPBcSpCxVAOonVcL2SzUYRX38uEZFyAPsLiqRS0q6l9OYH1ec7HJLM8LGEKu0ulfoki4wAAAA==') format('woff2'),
+        url('../fonts/iconfont.woff?t=1566467720844') format('woff'),
+        url('../fonts/iconfont.ttf?t=1566467720844') format('truetype'),
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+        url('../fonts/iconfont.svg?t=1566467720844#M-iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.G-ficon {
+    font-family: "M-iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.G-ficon-heart:before {
+    content: "\e633";
+}
+
+.demo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -40px;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    background: #f05050;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.demo .heart-con {
+    position: relative;
+}
+
+
+.ani-heart {
+	position: absolute;
+    left: 50%;
+    margin: 0 0 0 -15px;
+	animation-name: heartFlow;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+.ani-heart .G-ficon-heart {
+	font-size: 30px;
+    color: #f05050;
+	display: inline-block;
+    animation-name: heart-l;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.ani-heart .G-ficon-heart.right {
+     animation-name: heart-r;
+}
+
+@-webkit-keyframes heart-l{
+	0% {
+		transform: translateX(0);
+	}
+	16.7% {
+		transform: translateX(-20px);
+	}
+	50% {
+		transform: translateX(20px);
+	}
+	83.3% {
+		transform: translateX(-20px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@-webkit-keyframes heart-r{
+    0% {
+        transform: translateX(0);
+    }
+    16.7% {
+        transform: translateX(20px);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    83.3% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes heartFlow{
+	0% {
+        opacity: 1;
+		top: 0px;
+	}
+	100% {
+        opacity: 0;
+		top: -100px;
+	}
+}

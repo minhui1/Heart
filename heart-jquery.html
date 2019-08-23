@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	/*爱心动画*/
+.an-box{width: 4.5rem; height: 6.0rem; position: absolute; top: 150px; left: 550px;}
+.an-box .an01,
+.an-box .an02,
+.an-box .an03,
+.an-box .an04{display: block;  position: absolute; bottom: 0; opacity: 0; }
+.an-box .an01{width: 1.0rem; height:0.875rem;  background: url(img/F1.png); background-size: 100%;}
+.an-box .an02{width: 1.25rem;height: 1.125rem; background: url(img/F2.png); background-size: 100%;}
+.an-box .an03{width: 1.5rem;height: 1.375rem; background: url(img/F3.png); background-size: 100%;}
+.an-box .an04{width: 1.75rem;height: 1.625rem; background: url(img/F4.png); background-size: 100%;}
+
+
+.animated-a{
+	-animation: an-a 2s infinite;
+	animation: an-a 2s infinite;
+}
+@-webkit-keyframes an-a{
+	0%{opacity:0;
+		-webkit-transform:translate3d(-5px,-2px,0) scale(.4);
+		transform:translate3d(-5px,-2px,0) scale(.4);
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity:0;
+		-webkit-transform:translate3d(-5px,-30px,0) scale(1.1);
+		transform:translate3d(-5px,-30px,0) scale(1.1);
+	}
+}
+.animated-b{
+	-webkit-animation: an-b 3s infinite 1s;
+	animation: an-b 3s infinite 1s;
+}
+@-webkit-keyframes an-b{
+
+	0%{opacity:0;
+		-webkit-transform:translate3d(10px,0,0) scale(.7);
+		transform:translate3d(10px,0,0) scale(.7);
+	}
+	50%{
+		opacity:1;
+		
+	}
+	100%{opacity:0;
+		-webkit-transform:translate3d(17px,-24px,0) scale(1);
+		transform:translate3d(17px,-24px,0) scale(1);
+	}
+
+}
+
+.animated-c{
+	-webkit-animation: an-c 3s infinite 2s;
+	animation: an-c 3s infinite 2s;
+}
+@-webkit-keyframes an-c{
+	0%{opacity:0;
+		-webkit-transform:translate3d(-15px,0,0) scale(.8);
+		transform:translate3d(-15px,0,0) scale(0.8);
+	}
+	50%{
+		opacity:1;
+		
+	}
+	100%{opacity:0;
+		-webkit-transform:translate3d(-33px,-53px,0) scale(1);
+		transform:translate3d(-33px,-53px,0) scale(1);
+	}
+}
+
+.animated-d{
+	-webkit-animation: an-d 3s infinite 3s;
+	animation: an-d 3s infinite 3s;
+}
+@-webkit-keyframes an-d{
+	0%{opacity:0;
+		-webkit-transform:translate3d(3px,0,0) scale(.9);
+		transform:translate3d(3px,0,0) scale(.9);
+	}
+	50%{
+		opacity:1;
+		
+	}
+	100%{opacity:0;
+		-webkit-transform:translate3d(3px,-92px,0) scale(1);
+		transform:translate3d(3px,-92px,0) scale(1);
+	}
+}
+	</style>
+</head>
+<body>
+	<div class="an-box">
+		<span class="an01 animated-a"></span>
+		<span class="an02 animated-b"></span>
+		<span class="an03 animated-c"></span>
+		<span class="an04 animated-d"></span> 
+	</div>
+</body>
+</html>
