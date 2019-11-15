@@ -97,17 +97,20 @@ html{font-size: 16px;}
 		transform:translate3d(0,0,0) rotate(0deg)
 	}
 }
-/*@keyframes rollIn{
+@keyframes rollIn{
 	0%{
 		right: 0;
-		opacity:.6;-webkit-transform:translate3d(100%,0,0) rotate(180deg);
+		opacity:.6;
+		-webkit-transform:translate3d(100%,0,0) rotate(180deg);
 		transform:translate3d(100%,0,0) rotate(180deg)
 	}
 	to{
-		right: 4.25rem;
-		opacity:1;-webkit-transform:none;transform:none
+		right: 68px;
+		opacity:1;
+		-webkit-transform:translate3d(0,0,0) rotate(0deg);
+		transform:translate3d(0,0,0) rotate(0deg)
 	}
-}*/
+}
 /*标题推出*/
 .open-class .an-fadeInRight{
 	-webkit-animation-name:fadeInRight;
