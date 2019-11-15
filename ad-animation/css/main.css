@@ -27,7 +27,7 @@ html{font-size: 16px;}
 /*新增广告位+动画*/
 .M-adsense{position: fixed; bottom: 5.0rem; right: 0; z-index: 22; width: 100%; height: 3.0625rem;}
 .M-adsense .mod-adsense{position: relative; height: 100%;display: -webkit-flex;display: flex; -webkit-align-items: center; align-items: center;}
-.M-adsense .mod-xglogo{position: absolute; right: 4.25rem; top: -7px; opacity: 0; z-index: 4; width: 3.5rem; height:3.0625rem;background: url(../images/logo.png)no-repeat; background-size: 100% 100%;}
+.M-adsense .mod-xglogo{position: absolute; right: 68px; top: -7px; opacity: 0; z-index: 4; width: 3.5rem; height:3.0625rem;background: url(../images/logo.png)no-repeat; background-size: 100% 100%;}
 .M-adsense .mod-stop{position: absolute; width: 100%;height: 3.0625rem; right: 0; display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
@@ -48,6 +48,30 @@ html{font-size: 16px;}
 	animation-fill-mode:none;
 }
 @-webkit-keyframes shake{
+	0%{
+		opacity: 0;
+		right: 0;
+		-webkit-transform:scaleX(1);transform:scaleX(1)
+	}
+	10%,20%{
+		-webkit-transform:scale3d(.9,.9,.9) rotate(-10deg);
+		transform:scale3d(.9,.9,.9) rotate(-10deg)
+	}
+	30%,50%,70%,90%{
+		-webkit-transform:scale3d(1,1,1) rotate(10deg);
+		transform:scale3d(1,1,1) rotate(10deg)
+	}
+	40%,60%,80%{
+		-webkit-transform:scale3d(1,1,1) rotate(-10deg);
+		transform:scale3d(1,1,1) rotate(-10deg)
+	}
+	to{
+		opacity: 1;
+		right: 0;
+		-webkit-transform:scaleX(1);transform:scaleX(1)
+	}
+}
+@keyframes shake{
 	0%{
 		opacity: 0;
 		right: 0;
@@ -156,43 +180,44 @@ html{font-size: 16px;}
 		opacity:1;-webkit-transform:none;transform:none;
 	}
 	to{
-		opacity:1;-webkit-transform:translate3d(18.3%,0,0);transform:translate3d(18.3%,0,0)
+		opacity:1;-webkit-transform:translate3d(16.6%,0,0);transform:translate3d(16.6%,0,0)
 	}
 }
-/*标题收回*/
-.mod-stop .an-fadeInAddLeft{
-	-webkit-animation-name:fadeInAddLeft;
-	animation-name:fadeInAddLeft;
-	-webkit-animation-duration:.1s;
-	animation-duration:.1s;
-	/*-webkit-animation-delay:3.05s;
-	animation-delay:3.05s;*/
-	-webkit-animation-fill-mode:both;
-	animation-fill-mode:both;
-}
-
-@-webkit-keyframes fadeInAddLeft{
+@keyframes fadeInLeft{
 	0%{
 		opacity:1;-webkit-transform:none;transform:none;
 	}
 	to{
-		opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)
+		opacity:1;-webkit-transform:translate3d(16.6%,0,0);transform:translate3d(16.6%,0,0)
 	}
 }
+
 /*logo收回*/
 .stop-class .an-roll-stop{
 	-webkit-animation-name:rollIn-stop;
 	animation-name:rollIn-stop;
 	-webkit-animation-duration:1.2s;
 	animation-duration:1.2s;
-	/*-webkit-animation-delay:1s;
-	animation-delay:1s;*/
 	-webkit-animation-fill-mode:both;
 	animation-fill-mode:both;
 }
 @-webkit-keyframes rollIn-stop{
 	0%{
-		right: 4.25rem;
+		right: 68px;
+		opacity:1;
+		-webkit-transform:none;transform:none
+		
+	}
+	to{
+		right: 0;
+		opacity:0;
+		-webkit-transform:translate3d(100%,0,0) rotate(0deg);
+		transform:translate3d(100%,0,0) rotate(0deg)
+	}
+}
+@keyframes rollIn-stop{
+	0%{
+		right: 68px;
 		opacity:1;
 		-webkit-transform:none;transform:none
 		
@@ -211,12 +236,14 @@ html{font-size: 16px;}
 	animation-name:fadeIn-stop;
 	-webkit-animation-duration:.4s;
 	animation-duration:.4s;
-	/*-webkit-animation-delay:3.05s;
-	animation-delay:3.05s;*/
 	-webkit-animation-fill-mode:both;
 	animation-fill-mode:both;
 }
 @-webkit-keyframes fadeIn-stop{
+	0%{opacity:1;}
+	to{opacity:0;}
+}
+@keyframes fadeIn-stop{
 	0%{opacity:1;}
 	to{opacity:0;}
 }
@@ -258,6 +285,50 @@ html{font-size: 16px;}
 		-webkit-transform:scaleX(1);transform:scaleX(1)
 	}
 }
+@keyframes shake-show{
+	0%{
+		opacity: 0;
+		right: 0;
+		-webkit-transform:scaleX(1);transform:scaleX(1)
+	}
+	10%,20%{
+		-webkit-transform:scale3d(.9,.9,.9) rotate(-10deg);
+		transform:scale3d(.9,.9,.9) rotate(-10deg)
+	}
+	30%,50%,70%,90%{
+		-webkit-transform:scale3d(1,1,1) rotate(10deg);
+		transform:scale3d(1,1,1) rotate(10deg)
+	}
+	40%,60%,80%{
+		-webkit-transform:scale3d(1,1,1) rotate(-10deg);
+		transform:scale3d(1,1,1) rotate(-10deg)
+	}
+	to{
+		opacity: 1;
+		right: 0;
+		-webkit-transform:scaleX(1);transform:scaleX(1)
+	}
+}
+/*收回之后，之前logo消失，显示新的logo*/
+.stop-class .an-up .an-rollUp,
+.stop-class .an-rollUp{
+	-webkit-animation-name:an-rollUp;
+	animation-name:an-rollUp;
+	-webkit-animation-duration:1s;
+	animation-duration:1s;
+	-webkit-animation-delay:1.2s;
+	animation-delay:1.2s;
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+}
+@-webkit-keyframes an-rollUp{
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+@keyframes an-rollUp{
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
 
 .open-class .an-fadeIn{
 	-webkit-animation-name:fadeIn;
@@ -274,6 +345,28 @@ html{font-size: 16px;}
 	animation-direction:alternate;*/
 }
 @-webkit-keyframes fadeIn{
+	0%{
+		opacity: 0;
+		-webkit-transform:rotate(0deg)
+	}
+	10%,20%{
+		-webkit-transform: rotate(-10deg);
+		transform: rotate(-10deg)
+	}
+	30%,50%,70%,90%{
+		-webkit-transform: rotate(10deg);
+		transform: rotate(10deg)
+	}
+	40%,60%,80%{
+		-webkit-transform: rotate(-10deg);
+		transform: rotate(-10deg)
+	}
+	to{
+		opacity: 1;
+		transform:rotate(0deg)
+	}
+}
+@keyframes fadeIn{
 	0%{
 		opacity: 0;
 		-webkit-transform:rotate(0deg)
