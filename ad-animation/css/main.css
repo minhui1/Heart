@@ -25,16 +25,16 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 html{font-size: 16px;}
 /*新增广告位+动画*/
-.M-adsense{position: fixed; bottom: 5.0rem; right: 0; z-index: 22; width: 100%; height: 3.0625rem;}
+.M-adsense{position: fixed; bottom: 5.0rem; right: 0; z-index: 22; width: 7.3125rem; /*max-width: 750px; width: 100%;*/ height: 3.0625rem;}
 .M-adsense .mod-adsense{position: relative; height: 100%;display: -webkit-flex;display: flex; -webkit-align-items: center; align-items: center;}
-.M-adsense .mod-xglogo{position: absolute; right: 68px; top: -7px; opacity: 0; z-index: 4; width: 3.5rem; height:3.0625rem;background: url(../images/logo.png)no-repeat; background-size: 100% 100%;}
+.M-adsense .mod-xglogo{position: absolute; right: 58%; top: -7px; opacity: 0; z-index: 4; width: 3.5rem; height:3.0625rem;background: url(../images/logo.png)no-repeat; background-size: 100% 100%;}
 .M-adsense .mod-stop{position: absolute; width: 100%;height: 3.0625rem; right: 0; display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
     align-items: center;}
 .M-adsense .mod-stop .mod-xglogo{opacity: 1; }
 .M-adsense .mod-title{ position: absolute; right: 0; z-index: 1; text-align: center; width: 4.5625rem; height: 1.75rem; line-height: 1.75rem; background: url(../images/adsense_bg.png) no-repeat; background-size: 100% 100%;}
-.M-adsense .mod-title h3{font-size: 0.75rem; color: #980000; font-weight: bold;}
+.M-adsense .mod-title h3{font-size: 0.75rem; color: #980000; font-weight: bold;padding-left: 0.1875rem;white-space: nowrap;-webkit-box-sizing: border-box;  box-sizing: border-box;}
 .M-adsense .mod-elment-1{ opacity: 0; position: absolute; top: 2px; right: 3.3125rem;z-index: 3; width:0.6875rem; height: 0.875rem; background: url(../images/elment_redA.png) no-repeat;  background-size: 100% 100%; }
 .M-adsense .mod-elment-2{ opacity: 0; position: absolute; top: -8px; right: 0;z-index: 3;width:1.125rem; height: 1.4375rem; background: url(../images/elment_redB.png) no-repeat;  background-size: 100% 100%; }
 
@@ -42,8 +42,8 @@ html{font-size: 16px;}
 .open-class .an-shake{
 	-webkit-animation-name:shake;
 	animation-name:shake;
-	-webkit-animation-duration:3s;
-	animation-duration:3s;
+	-webkit-animation-duration:2s;
+	animation-duration:2s;
 	-webkit-animation-fill-mode:none;
 	animation-fill-mode:none;
 }
@@ -51,48 +51,48 @@ html{font-size: 16px;}
 	0%{
 		opacity: 0;
 		right: 0;
-		-webkit-transform:scaleX(1);transform:scaleX(1)
+		-webkit-transform:scaleX(1);transform:scaleX(1);
 	}
 	10%,20%{
 		-webkit-transform:scale3d(.9,.9,.9) rotate(-10deg);
-		transform:scale3d(.9,.9,.9) rotate(-10deg)
+		transform:scale3d(.9,.9,.9) rotate(-10deg);
 	}
 	30%,50%,70%,90%{
 		-webkit-transform:scale3d(1,1,1) rotate(10deg);
-		transform:scale3d(1,1,1) rotate(10deg)
+		transform:scale3d(1,1,1) rotate(10deg);
 	}
 	40%,60%,80%{
 		-webkit-transform:scale3d(1,1,1) rotate(-10deg);
-		transform:scale3d(1,1,1) rotate(-10deg)
+		transform:scale3d(1,1,1) rotate(-10deg);
 	}
 	to{
 		opacity: 1;
 		right: 0;
-		-webkit-transform:scaleX(1);transform:scaleX(1)
+		-webkit-transform:scaleX(1);transform:scaleX(1);
 	}
 }
 @keyframes shake{
 	0%{
 		opacity: 0;
 		right: 0;
-		-webkit-transform:scaleX(1);transform:scaleX(1)
+		-webkit-transform:scaleX(1);transform:scaleX(1);
 	}
 	10%,20%{
 		-webkit-transform:scale3d(.9,.9,.9) rotate(-10deg);
-		transform:scale3d(.9,.9,.9) rotate(-10deg)
+		transform:scale3d(.9,.9,.9) rotate(-10deg);
 	}
 	30%,50%,70%,90%{
 		-webkit-transform:scale3d(1,1,1) rotate(10deg);
-		transform:scale3d(1,1,1) rotate(10deg)
+		transform:scale3d(1,1,1) rotate(10deg);
 	}
 	40%,60%,80%{
 		-webkit-transform:scale3d(1,1,1) rotate(-10deg);
-		transform:scale3d(1,1,1) rotate(-10deg)
+		transform:scale3d(1,1,1) rotate(-10deg);
 	}
 	to{
 		opacity: 1;
 		right: 0;
-		-webkit-transform:scaleX(1);transform:scaleX(1)
+		-webkit-transform:scaleX(1);transform:scaleX(1);
 	}
 }
 
@@ -102,8 +102,8 @@ html{font-size: 16px;}
 	animation-name:rollIn;
 	-webkit-animation-duration:1.2s;
 	animation-duration:1.2s;
-	-webkit-animation-delay:3.0s;
-	animation-delay:3.0s;
+	-webkit-animation-delay:2.0s;
+	animation-delay:2.0s;
 	-webkit-animation-fill-mode:both;
 	animation-fill-mode:both;
 }
@@ -112,13 +112,13 @@ html{font-size: 16px;}
 		right: 0;
 		opacity:.6;
 		-webkit-transform:translate3d(100%,0,0) rotate(180deg);
-		transform:translate3d(100%,0,0) rotate(180deg)
+		transform:translate3d(100%,0,0) rotate(180deg);
 	}
 	to{
-		right: 68px;
+		right: 58%;
 		opacity:1;
 		-webkit-transform:translate3d(0,0,0) rotate(0deg);
-		transform:translate3d(0,0,0) rotate(0deg)
+		transform:translate3d(0,0,0) rotate(0deg);
 	}
 }
 @keyframes rollIn{
@@ -126,13 +126,13 @@ html{font-size: 16px;}
 		right: 0;
 		opacity:.6;
 		-webkit-transform:translate3d(100%,0,0) rotate(180deg);
-		transform:translate3d(100%,0,0) rotate(180deg)
+		transform:translate3d(100%,0,0) rotate(180deg);
 	}
 	to{
-		right: 68px;
+		right: 58%;
 		opacity:1;
 		-webkit-transform:translate3d(0,0,0) rotate(0deg);
-		transform:translate3d(0,0,0) rotate(0deg)
+		transform:translate3d(0,0,0) rotate(0deg);
 	}
 }
 /*标题推出*/
@@ -141,8 +141,8 @@ html{font-size: 16px;}
 	animation-name:fadeInRight;
 	-webkit-animation-duration:1.2s;
 	animation-duration:1.2s;
-	-webkit-animation-delay:3.0s;
-	animation-delay:3.0s;
+	-webkit-animation-delay:2.0s;
+	animation-delay:2.0s;
 	-webkit-animation-fill-mode:both;
 	animation-fill-mode:both;
 }
@@ -152,7 +152,7 @@ html{font-size: 16px;}
 		opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)
 	}
 	to{
-		opacity:1;-webkit-transform:none;transform:none
+		opacity:1;-webkit-transform:none;transform:none;
 	}
 }
 @keyframes fadeInRight{
@@ -160,7 +160,7 @@ html{font-size: 16px;}
 		opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)
 	}
 	to{
-		opacity:1;-webkit-transform:none;transform:none
+		opacity:1;-webkit-transform:none;transform:none;
 	}
 }
 /*标题收回*/
@@ -169,8 +169,6 @@ html{font-size: 16px;}
 	animation-name:fadeInLeft;
 	-webkit-animation-duration:1.2s;
 	animation-duration:1.2s;
-	/*-webkit-animation-delay:3.05s;
-	animation-delay:3.05s;*/
 	-webkit-animation-fill-mode:both;
 	animation-fill-mode:both;
 }
@@ -180,7 +178,7 @@ html{font-size: 16px;}
 		opacity:1;-webkit-transform:none;transform:none;
 	}
 	to{
-		opacity:1;-webkit-transform:translate3d(16.6%,0,0);transform:translate3d(16.6%,0,0)
+		opacity:1;-webkit-transform:translate3d(62.5%,0,0);transform:translate3d(62.5%,0,0)
 	}
 }
 @keyframes fadeInLeft{
@@ -188,7 +186,7 @@ html{font-size: 16px;}
 		opacity:1;-webkit-transform:none;transform:none;
 	}
 	to{
-		opacity:1;-webkit-transform:translate3d(16.6%,0,0);transform:translate3d(16.6%,0,0)
+		opacity:1;-webkit-transform:translate3d(62.5%,0,0);transform:translate3d(62.5%,0,0)
 	}
 }
 
@@ -203,30 +201,30 @@ html{font-size: 16px;}
 }
 @-webkit-keyframes rollIn-stop{
 	0%{
-		right: 68px;
+		right: 58%;
 		opacity:1;
-		-webkit-transform:none;transform:none
+		-webkit-transform:none;transform:none;
 		
 	}
 	to{
 		right: 0;
 		opacity:0;
 		-webkit-transform:translate3d(100%,0,0) rotate(0deg);
-		transform:translate3d(100%,0,0) rotate(0deg)
+		transform:translate3d(100%,0,0) rotate(0deg);
 	}
 }
 @keyframes rollIn-stop{
 	0%{
-		right: 68px;
+		right: 58%;
 		opacity:1;
-		-webkit-transform:none;transform:none
+		-webkit-transform:none;transform:none;
 		
 	}
 	to{
 		right: 0;
 		opacity:0;
 		-webkit-transform:translate3d(100%,0,0) rotate(0deg);
-		transform:translate3d(100%,0,0) rotate(0deg)
+		transform:translate3d(100%,0,0) rotate(0deg);
 	}
 }
 
@@ -265,48 +263,48 @@ html{font-size: 16px;}
 	0%{
 		opacity: 0;
 		right: 0;
-		-webkit-transform:scaleX(1);transform:scaleX(1)
+		-webkit-transform:scaleX(1);transform:scaleX(1);
 	}
 	10%,20%{
 		-webkit-transform:scale3d(.9,.9,.9) rotate(-10deg);
-		transform:scale3d(.9,.9,.9) rotate(-10deg)
+		transform:scale3d(.9,.9,.9) rotate(-10deg);
 	}
 	30%,50%,70%,90%{
 		-webkit-transform:scale3d(1,1,1) rotate(10deg);
-		transform:scale3d(1,1,1) rotate(10deg)
+		transform:scale3d(1,1,1) rotate(10deg);
 	}
 	40%,60%,80%{
 		-webkit-transform:scale3d(1,1,1) rotate(-10deg);
-		transform:scale3d(1,1,1) rotate(-10deg)
+		transform:scale3d(1,1,1) rotate(-10deg);
 	}
 	to{
 		opacity: 1;
 		right: 0;
-		-webkit-transform:scaleX(1);transform:scaleX(1)
+		-webkit-transform:scaleX(1);transform:scaleX(1);
 	}
 }
 @keyframes shake-show{
 	0%{
 		opacity: 0;
 		right: 0;
-		-webkit-transform:scaleX(1);transform:scaleX(1)
+		-webkit-transform:scaleX(1);transform:scaleX(1);
 	}
 	10%,20%{
 		-webkit-transform:scale3d(.9,.9,.9) rotate(-10deg);
-		transform:scale3d(.9,.9,.9) rotate(-10deg)
+		transform:scale3d(.9,.9,.9) rotate(-10deg);
 	}
 	30%,50%,70%,90%{
 		-webkit-transform:scale3d(1,1,1) rotate(10deg);
-		transform:scale3d(1,1,1) rotate(10deg)
+		transform:scale3d(1,1,1) rotate(10deg);
 	}
 	40%,60%,80%{
 		-webkit-transform:scale3d(1,1,1) rotate(-10deg);
-		transform:scale3d(1,1,1) rotate(-10deg)
+		transform:scale3d(1,1,1) rotate(-10deg);
 	}
 	to{
 		opacity: 1;
 		right: 0;
-		-webkit-transform:scaleX(1);transform:scaleX(1)
+		-webkit-transform:scaleX(1);transform:scaleX(1);
 	}
 }
 /*收回之后，之前logo消失，显示新的logo*/
@@ -335,8 +333,8 @@ html{font-size: 16px;}
 	animation-name:fadeIn;
 	-webkit-animation-duration:5s;
 	animation-duration:5s;
-	-webkit-animation-delay:3.5s;
-	animation-delay:3.5s;
+	-webkit-animation-delay:2.5s;
+	animation-delay:2.5s;
 	-webkit-animation-fill-mode:both;
 	animation-fill-mode:both;
 	-webkit-animation-iteration-count:1;
@@ -347,46 +345,45 @@ html{font-size: 16px;}
 @-webkit-keyframes fadeIn{
 	0%{
 		opacity: 0;
-		-webkit-transform:rotate(0deg)
+		-webkit-transform:rotate(0deg);
 	}
 	10%,20%{
 		-webkit-transform: rotate(-10deg);
-		transform: rotate(-10deg)
+		transform: rotate(-10deg);
 	}
 	30%,50%,70%,90%{
 		-webkit-transform: rotate(10deg);
-		transform: rotate(10deg)
+		transform: rotate(10deg);
 	}
 	40%,60%,80%{
 		-webkit-transform: rotate(-10deg);
-		transform: rotate(-10deg)
+		transform: rotate(-10deg);
 	}
 	to{
 		opacity: 1;
-		transform:rotate(0deg)
+		transform:rotate(0deg);
 	}
 }
 @keyframes fadeIn{
 	0%{
 		opacity: 0;
-		-webkit-transform:rotate(0deg)
+		-webkit-transform:rotate(0deg);
 	}
 	10%,20%{
 		-webkit-transform: rotate(-10deg);
-		transform: rotate(-10deg)
+		transform: rotate(-10deg);
 	}
 	30%,50%,70%,90%{
 		-webkit-transform: rotate(10deg);
-		transform: rotate(10deg)
+		transform: rotate(10deg);
 	}
 	40%,60%,80%{
 		-webkit-transform: rotate(-10deg);
-		transform: rotate(-10deg)
+		transform: rotate(-10deg);
 	}
 	to{
 		opacity: 1;
-		transform:rotate(0deg)
+		transform:rotate(0deg);
 	}
 }
-
 
