@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lottie动画</title>
+    <style type="text/css">
+        div{
+            width:100%;
+            height:700px;
+        }
+    </style>
+</head>
+<body>
+    <div id="animation"></div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            var animation = document.querySelector('#animation');
+            lottie.loadAnimation({
+                container: animation,
+                renderer: 'canvas',
+                loop: true,
+                autoplay: true,
+                path:'./data.json'
+            });
+        }
+    </script>
+</body>
+</html>
