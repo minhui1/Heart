@@ -7,5 +7,5 @@
 >项目地址：https://minhui1.github.io/Heart/heart-js/index.html
 
 `广告位效果   #CSS3实现版#`
->项目地址：https://minhui1.github.io/Heart/ad-animation/dome.html
+>项目地址：https://minhui1.github.io/Heart/ad-animation/demo.html
 
